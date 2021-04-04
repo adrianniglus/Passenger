@@ -1,0 +1,12 @@
+D:\Passenger\Passenger.Core\bin\Debug\net5.0\Passenger.Core.deps.json
+D:\Passenger\Passenger.Core\bin\Debug\net5.0\Passenger.Core.dll
+D:\Passenger\Passenger.Core\bin\Debug\net5.0\ref\Passenger.Core.dll
+D:\Passenger\Passenger.Core\bin\Debug\net5.0\Passenger.Core.pdb
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.csprojAssemblyReference.cache
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.AssemblyInfoInputs.cache
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.AssemblyInfo.cs
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.csproj.CoreCompileInputs.cache
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.dll
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\ref\Passenger.Core.dll
+D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.pdb

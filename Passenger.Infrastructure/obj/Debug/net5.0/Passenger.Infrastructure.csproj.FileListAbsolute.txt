@@ -1,0 +1,15 @@
+D:\Passenger\Passenger.Infrastructure\bin\Debug\net5.0\Passenger.Infrastructure.deps.json
+D:\Passenger\Passenger.Infrastructure\bin\Debug\net5.0\Passenger.Infrastructure.dll
+D:\Passenger\Passenger.Infrastructure\bin\Debug\net5.0\ref\Passenger.Infrastructure.dll
+D:\Passenger\Passenger.Infrastructure\bin\Debug\net5.0\Passenger.Infrastructure.pdb
+D:\Passenger\Passenger.Infrastructure\bin\Debug\net5.0\Passenger.Core.dll
+D:\Passenger\Passenger.Infrastructure\bin\Debug\net5.0\Passenger.Core.pdb
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.csprojAssemblyReference.cache
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.AssemblyInfoInputs.cache
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.AssemblyInfo.cs
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.csproj.CopyComplete
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.dll
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\ref\Passenger.Infrastructure.dll
+D:\Passenger\Passenger.Infrastructure\obj\Debug\net5.0\Passenger.Infrastructure.pdb
