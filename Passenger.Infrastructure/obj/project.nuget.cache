@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "391PzPeyUCRIs1aOev2yia3cb0VVzp04if6qgVE5wOd4mwIx8iHjm2lA2VQbiR5kBEaMoglQS3SfuAqDNN36nA==",
+  "dgSpecHash": "gy2RTCWIFkekhOybymQKbU9gQzpMLRC9Hnghegi7DFJPSeFG9D5dOpODsn90TG7IwJi54gdOjwbmNki/s+VYJw==",
   "success": true,
   "projectFilePath": "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Adrian\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,9 +10,9 @@ namespace Passenger.Infrastructure.Repositories
     {
         private static ISet<User> _users = new HashSet<User>
         {
-            new User("User1@gmail.com","user1","secret","salt"),
-            new User("User2@gmail.com","user2","secret","salt"),
-            new User("User3@gmail.com","user3","secret","salt")
+            new User("User1@gmail.com","user123","Secret123","salt"),
+            new User("User2@gmail.com","user234","Secret123","salt"),
+            new User("User3@gmail.com","user356","Secret123","salt")
         };
         
         public void Add(User user)
@@ -20,10 +20,10 @@ namespace Passenger.Infrastructure.Repositories
             _users.Add(user);
         }
         public User Get(Guid id)
-            => _users.Single(x => x.Id == id);
+            => _users.SingleOrDefault(x => x.Id == id);
 
         public User Get(string email)
-            => _users.Single(x => x.Email == email.ToLowerInvariant());
+            => _users.SingleOrDefault(x => x.Email == email.ToLowerInvariant());
             
         public IEnumerable<User> GetAll()
             => _users;

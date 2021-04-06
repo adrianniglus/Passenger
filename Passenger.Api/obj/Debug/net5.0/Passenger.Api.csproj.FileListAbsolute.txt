@@ -31,3 +31,4 @@ D:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.dll
 D:\Passenger\Passenger.Api\obj\Debug\net5.0\ref\Passenger.Api.dll
 D:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.pdb
 D:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.genruntimeconfig.cache
+D:\Passenger\Passenger.Api\bin\Debug\net5.0\AutoMapper.dll

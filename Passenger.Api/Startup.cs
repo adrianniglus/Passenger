@@ -14,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using Passenger.Infrastructure.Services;
 using Passenger.Infrastructure.Repositories;
 using Passenger.Core.Repositories;
+using Passenger.Infrastructure.Mappers;
 
 namespace Passenger.Api
 {
@@ -31,6 +32,7 @@ namespace Passenger.Api
         {
             services.AddScoped<IUserService,UserService>();
             services.AddScoped<IUserRepository,InMemoryUserRepository>();
+            services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

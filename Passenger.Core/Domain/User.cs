@@ -6,8 +6,8 @@ namespace Passenger.Core.Domain
     public class User
     {
         public Guid Id {get; protected set;}
-        public string Email {get; protected set;} //catch
-        public string Password {get; protected set;} //catch
+        public string Email {get; protected set;}
+        public string Password {get; protected set;}
         public string Salt {get; protected set;}
         public string Username {get; protected set;} 
         public string FullName {get; protected set;} //validation
@@ -69,7 +69,7 @@ namespace Passenger.Core.Domain
                 return;
             }
 
-            if(password.Length < 30)
+            if(password.Length > 30)
             {
                 throw new Exception("Password is too long");
             }

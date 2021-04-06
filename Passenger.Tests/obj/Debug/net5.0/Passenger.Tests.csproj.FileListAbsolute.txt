@@ -101,3 +101,4 @@ D:\Passenger\Passenger.Tests\obj\Debug\net5.0\Passenger.Tests.dll
 D:\Passenger\Passenger.Tests\obj\Debug\net5.0\ref\Passenger.Tests.dll
 D:\Passenger\Passenger.Tests\obj\Debug\net5.0\Passenger.Tests.pdb
 D:\Passenger\Passenger.Tests\obj\Debug\net5.0\Passenger.Tests.genruntimeconfig.cache
+D:\Passenger\Passenger.Tests\bin\Debug\net5.0\AutoMapper.dll
