@@ -7,6 +7,8 @@ using Microsoft.Extensions.Logging;
 using Passenger.Infrastructure.DTO;
 using Passenger.Infrastructure.Services;
 using Passenger.Infrastructure.Commands.Users;
+using Newtonsoft;
+
 
 namespace Passenger.Api.Controllers
 {
@@ -21,13 +23,24 @@ namespace Passenger.Api.Controllers
         }
 
         [HttpGet("{email}")]
-       public UserDTO Get(string email)
-            => _userService.Get(email);
+       public async Task<IActionResult> Get(string email)
+       {
+            var user = await _userService.GetAsync(email);
 
+            if(user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+       }
+            
         [HttpPost("")]
-        public void Post([FromBody]CreateUser request)
-         {
-             _userService.Register(request.Email, request.Username, request.Password);
-         }
+        public async Task<IActionResult> Post([FromBody]CreateUser request)
+        {        
+            await _userService.RegisterAsync(request.Email, request.Username, request.Password);
+
+            return Created($"users/{request.Email}", new object());
+        }    
     }
 }

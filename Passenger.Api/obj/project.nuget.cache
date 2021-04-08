@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4vc3aZj87pUGAFokDyXhw32x2i6pt/YrVG0BXKWxEVwpvPP4mIJw6rUmix9iIyP96yAljGbGeqfepz0pJtPCeA==",
+  "dgSpecHash": "d6lDHKOziznhXf545AUeS4lJwAWeUY9R3reR+xdNRWnVcvA4SOuyk+WjdeT69fqnivwznTeaL4qprSU0qfsS2g==",
   "success": true,
   "projectFilePath": "D:\\Passenger\\Passenger.Api\\Passenger.Api.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",

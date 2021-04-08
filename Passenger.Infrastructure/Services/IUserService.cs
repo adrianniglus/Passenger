@@ -1,13 +1,14 @@
 using System;
 using Passenger.Infrastructure.DTO;
+using System.Threading.Tasks;
 
 namespace Passenger.Infrastructure.Services
 {
     public interface IUserService
     {
-        UserDTO Get(string email);
+        Task<UserDTO> GetAsync(string email);
         
-        void Register(string email,string username,string password);
+        Task RegisterAsync(string email,string username,string password);
 
     }
 }

@@ -10,7 +10,7 @@ namespace Passenger.Core.Domain
         public string Password {get; protected set;}
         public string Salt {get; protected set;}
         public string Username {get; protected set;} 
-        public string FullName {get; protected set;} //validation
+        public string FullName {get; protected set;}
         public DateTime CreatedAt {get; protected set;}
         public DateTime UpdatedAt {get; protected set;}
 
@@ -89,7 +89,7 @@ namespace Passenger.Core.Domain
             }
             if(!ValidateUsername(username))
             {
-                throw new Exception("This is not a valid username! First letter need to be a letter, can contain only letters and numbers, 6 do 12 characters!");
+                throw new Exception("This is not a valid username! First character need to be a letter, can contain only letters and numbers, 6 do 12 characters!");
             }
 
             if(Username == username)
