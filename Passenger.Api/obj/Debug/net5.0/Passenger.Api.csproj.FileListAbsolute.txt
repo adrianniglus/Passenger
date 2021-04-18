@@ -33,3 +33,5 @@ D:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.pdb
 D:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.genruntimeconfig.cache
 D:\Passenger\Passenger.Api\bin\Debug\net5.0\AutoMapper.dll
 D:\Passenger\Passenger.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Passenger\Passenger.Api\bin\Debug\net5.0\Autofac.dll
+D:\Passenger\Passenger.Api\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll

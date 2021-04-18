@@ -13,22 +13,15 @@ using Passenger.Infrastructure.Commands.Users;
 
 namespace Passenger.Tests.EndToEnd.Controllers
 {
-    public class UsersControllerTests
+    public class UsersControllerTests : ControllerTestsBase
     {
-        private readonly TestServer _server;
-        private readonly HttpClient _client;
-        public UsersControllerTests()
-        {
-            _server = new TestServer(new WebHostBuilder()
-                        .UseStartup<Startup>());
-            _client = _server.CreateClient();
-        }
+        
 
         [Fact]
         public async Task given_valid_email_user_should_exist()
         {
             var email = "user1@gmail.com";
-            var response = await _client.GetAsync($"users/{email}");
+            var response = await Client.GetAsync($"users/{email}");
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
@@ -41,7 +34,7 @@ namespace Passenger.Tests.EndToEnd.Controllers
         public async Task given_invalid_email_user_should_not_exist()
         {
             var email = "use@gmail.com";
-            var response = await _client.GetAsync($"users/{email}");
+            var response = await Client.GetAsync($"users/{email}");
             
             response.StatusCode.Should().BeEquivalentTo(HttpStatusCode.NotFound);
         }
@@ -49,26 +42,21 @@ namespace Passenger.Tests.EndToEnd.Controllers
         [Fact]
         public async Task given_unique_email_user_should_be_created()
         {
-            var request = new CreateUser
+            var command = new CreateUser
             {
                 Email = "uniqueuser@email.com",
                 Username = "uniqueUser",
                 Password = "Secret1346"
             };
 
-            var payload = GetPayload(request);
+            var payload = GetPayload(command);
 
-            var response = await _client.PostAsync("users",payload);
+            var response = await Client.PostAsync("users",payload);
             
             response.StatusCode.Should().BeEquivalentTo(HttpStatusCode.Created);
-            response.Headers.Location.ToString().Should().BeEquivalentTo($"users/{request.Email}");
+            response.Headers.Location.ToString().Should().BeEquivalentTo($"users/{command.Email}");
         }
         
-        private static StringContent GetPayload(object data)
-        {
-            var json = JsonConvert.SerializeObject(data);
-
-            return new StringContent(json, Encoding.UTF8,"application/json");
-        }
+        
     }
 }

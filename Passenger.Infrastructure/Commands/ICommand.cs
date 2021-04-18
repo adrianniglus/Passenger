@@ -1,6 +1,6 @@
 namespace Passenger.Infrastructure.Commands
 {
-    public interface ICommands
+    public interface ICommand
     {
         
     }

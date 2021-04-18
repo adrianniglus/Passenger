@@ -15,6 +15,9 @@ using Passenger.Infrastructure.Services;
 using Passenger.Infrastructure.Repositories;
 using Passenger.Core.Repositories;
 using Passenger.Infrastructure.Mappers;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Passenger.Infrastructure.IoC.Modules;
 
 namespace Passenger.Api
 {
@@ -27,8 +30,10 @@ namespace Passenger.Api
 
         public IConfiguration Configuration { get; }
 
+        public IContainer ApplicationContainer { get; private set; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IUserService,UserService>();
             services.AddScoped<IUserRepository,InMemoryUserRepository>();
@@ -38,10 +43,16 @@ namespace Passenger.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Passenger.Api", Version = "v1" });
             });
+
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            builder.RegisterModule<CommandModule>();
+            ApplicationContainer = builder.Build();
+            return new AutofacServiceProvider(ApplicationContainer);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime appLifetime)
         {
             if (env.IsDevelopment())
             {
@@ -60,6 +71,9 @@ namespace Passenger.Api
             {
                 endpoints.MapControllers();
             });
+
+            appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
+
         }
     }
 }

@@ -119,3 +119,5 @@ D:\Passenger\Passenger.Tests.EndToEnd\bin\Debug\net5.0\Passenger.Infrastructure.
 D:\Passenger\Passenger.Tests.EndToEnd\bin\Debug\net5.0\Passenger.Infrastructure.pdb
 D:\Passenger\Passenger.Tests.EndToEnd\bin\Debug\net5.0\Passenger.Api.pdb
 D:\Passenger\Passenger.Tests.EndToEnd\bin\Debug\net5.0\Passenger.Core.pdb
+D:\Passenger\Passenger.Tests.EndToEnd\bin\Debug\net5.0\Autofac.dll
+D:\Passenger\Passenger.Tests.EndToEnd\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll

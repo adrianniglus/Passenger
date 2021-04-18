@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "797qWpdKwN9rnQumkjtmkKUmY19UHH/JxdM0wOa3Pjz0NlSBydqHpsL6OGjQMR9KFKgul5EGvQkznkrF3qVIyw==",
+  "dgSpecHash": "cWND7Zw7jdR9jhYaRwrZbfFngA1PEqYvacuK738g6xv02v6FlVN/Jci9O1VS0w8cLQr9rEuyj1ckMeEZvvv2kA==",
   "success": true,
   "projectFilePath": "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Adrian\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []

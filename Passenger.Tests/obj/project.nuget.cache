@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nNPhJ4cToLAlONeA0r+CL9biH2wLPuCjcjmqenlvsGnMHrVwGsDRlr/AMDxidsBzHbXonOsmcmUXO+485FiR/g==",
+  "dgSpecHash": "sbzVswoUI5ohCrVyrgzkefH1LidutMoCNiRB2QG+q2kLE/m2aJ3ZtgNiN9PPG1dcWTU9JuhiG6jbGKl89YAjjA==",
   "success": true,
   "projectFilePath": "D:\\Passenger\\Passenger.Tests\\Passenger.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Adrian\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
@@ -48,7 +49,7 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
-    "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.3.0\\system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",

@@ -98,6 +98,10 @@
               "target": "Package",
               "version": "[10.1.1, )"
             },
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
