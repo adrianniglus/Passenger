@@ -46,7 +46,8 @@ namespace Passenger.Tests.EndToEnd.Controllers
             {
                 Email = "uniqueuser@email.com",
                 Username = "uniqueUser",
-                Password = "Secret1346"
+                Password = "Secret1346",
+                Role = "user"
             };
 
             var payload = GetPayload(command);

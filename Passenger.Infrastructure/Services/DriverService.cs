@@ -25,5 +25,17 @@ namespace Passenger.Infrastructure.Services
 
             return _mapper.Map<Driver,DriverDTO>(driver);
         }
+
+        public async Task CreateDriver(Guid userId,string brand, string name, int seats)
+        {
+            var driver = await _driverRepository.GetAsync(userId);
+            if(driver != null && driver.UserId == userId)
+            {
+                throw new Exception("Driver alrady exists");
+            }
+
+            driver = new Driver(userId, brand, name, seats);
+            await _driverRepository.AddAsync(driver);
+        }
     }
 }

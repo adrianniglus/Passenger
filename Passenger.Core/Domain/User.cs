@@ -11,6 +11,7 @@ namespace Passenger.Core.Domain
         public string Salt {get; protected set;}
         public string Username {get; protected set;} 
         public string FullName {get; protected set;}
+        public string Role {get; protected set;}
         public DateTime CreatedAt {get; protected set;}
         public DateTime UpdatedAt {get; protected set;}
 
@@ -18,7 +19,7 @@ namespace Passenger.Core.Domain
         {
         }
 
-        public User(string email, string username, string password, string salt)
+        public User(string email, string username, string password, string role, string salt)
         {
             Id = Guid.NewGuid();
 
@@ -27,6 +28,8 @@ namespace Passenger.Core.Domain
             SetUsername(username);
 
             SetPassword(password);
+
+            SetRole(role);
 
             Salt = salt;
             CreatedAt = DateTime.UtcNow;
@@ -100,6 +103,20 @@ namespace Passenger.Core.Domain
             Username = username.ToLowerInvariant();
             UpdatedAt = DateTime.UtcNow;
 
+        }
+
+        public void SetRole(string role)
+        {
+            if(string.IsNullOrEmpty(role))
+            {
+                throw new Exception("Role can't be empty!");
+            }
+            if(Role == role)
+            {
+                return;
+            }
+            Role = role;
+            UpdatedAt = DateTime.UtcNow;
         }
 
 

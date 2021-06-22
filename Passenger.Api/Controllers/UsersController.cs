@@ -9,6 +9,7 @@ using Passenger.Infrastructure.Services;
 using Passenger.Infrastructure.Commands.Users;
 using Newtonsoft;
 using Passenger.Infrastructure.Commands;
+using Passenger.Infrastructure.Settings;
 
 namespace Passenger.Api.Controllers
 {
@@ -16,9 +17,11 @@ namespace Passenger.Api.Controllers
     public class UsersController : ApiControllerBase
     {
         private readonly IUserService _userService;
-        public UsersController(IUserService userService, ICommandDispatcher commandDispatcher)
+        private readonly GeneralSettings _settings;
+        public UsersController(IUserService userService, ICommandDispatcher commandDispatcher, GeneralSettings settings)
         :base(commandDispatcher)
         {
+            _settings = settings;
             _userService = userService;
         }
 

@@ -15,9 +15,15 @@ namespace Passenger.Core.Domain
         {
         }
 
-        public Driver(Guid userId)
+        public Driver(Guid userId, string brand, string name, int seats)
         {
             UserId = userId;
+            AddVehicle(brand,name,seats);
+        }
+
+        public void AddVehicle(string brand, string name, int seats)
+        {
+            Vehicle = Vehicle.Create(brand,name,seats);
         }
     }
 }

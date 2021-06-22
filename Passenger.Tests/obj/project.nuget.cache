@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sbzVswoUI5ohCrVyrgzkefH1LidutMoCNiRB2QG+q2kLE/m2aJ3ZtgNiN9PPG1dcWTU9JuhiG6jbGKl89YAjjA==",
+  "dgSpecHash": "xxc93TBzzwgpfdojQAnMdWILf1R7s60laIVvnk0S0C7mbcPlgaGaOi8CwB6c5jVQTzSjydRwKoamgyQ6a5+j8A==",
   "success": true,
   "projectFilePath": "D:\\Passenger\\Passenger.Tests\\Passenger.Tests.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,10 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.testhost\\5.0.5\\microsoft.aspnetcore.testhost.5.0.5.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

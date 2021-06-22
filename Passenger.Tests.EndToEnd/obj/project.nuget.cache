@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ywqg8O2VMh25gfchCfvuGf92ZeF1tDR+OArO+1IpihvhLT7UmAx2Z1ToaBKq8iA4cj8G/xj5U2KA+i6zjpMIwQ==",
+  "dgSpecHash": "7EgEJ8Gl9aPOpatACjnUgkwg/QeAiucegrLg1CSRX9cRm0tD3+vZbHg0Jcyou6C/D4vPtv9PTnBJpRqJEYA6hA==",
   "success": true,
   "projectFilePath": "D:\\Passenger\\Passenger.Tests.EndToEnd\\Passenger.Tests.EndToEnd.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,11 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
