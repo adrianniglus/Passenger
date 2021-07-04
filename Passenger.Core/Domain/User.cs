@@ -19,9 +19,9 @@ namespace Passenger.Core.Domain
         {
         }
 
-        public User(string email, string username, string password, string role, string salt)
+        public User(Guid userId, string email, string username, string password, string role, string salt)
         {
-            Id = Guid.NewGuid();
+            Id = userId;
 
             SetEmail(email);
             
@@ -92,7 +92,7 @@ namespace Passenger.Core.Domain
             }
             if(!ValidateUsername(username))
             {
-                throw new Exception("This is not a valid username! First character need to be a letter, can contain only letters and numbers, 6 do 12 characters!");
+                throw new Exception("This is not a valid username! First character need to be a letter, can contain only letters and numbers, 6 to 12 characters!");
             }
 
             if(Username == username)

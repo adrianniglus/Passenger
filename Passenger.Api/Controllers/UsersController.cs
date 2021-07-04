@@ -10,6 +10,7 @@ using Passenger.Infrastructure.Commands.Users;
 using Newtonsoft;
 using Passenger.Infrastructure.Commands;
 using Passenger.Infrastructure.Settings;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Passenger.Api.Controllers
 {
@@ -38,7 +39,7 @@ namespace Passenger.Api.Controllers
             return Ok(user);
        }
             
-        [HttpPost("")]
+        [HttpPost]
         public async Task<IActionResult> Post([FromBody]CreateUser command)
         {        
             await CommandDispatcher.DispatchAsync(command);

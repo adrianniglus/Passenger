@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Passenger.Infrastructure.Commands;
 using Passenger.Infrastructure.Commands.Users;
@@ -8,11 +9,13 @@ namespace Passenger.Api.Controllers
 {
     public class AccountController: ApiControllerBase
     {
-        
-        public AccountController(ICommandDispatcher commandDispatcher)
+        private readonly IJwtHandler _jwtHandler;
+        public AccountController(
+        ICommandDispatcher commandDispatcher,
+        IJwtHandler jwtHandler)
         :base(commandDispatcher)
         {
-            //do something
+            _jwtHandler = jwtHandler;
         }
     
         [HttpPut("")]
@@ -22,6 +25,10 @@ namespace Passenger.Api.Controllers
             await CommandDispatcher.DispatchAsync(command);
 
             return NoContent();
-        }   
+        }
+
+        
+
+       
     }
 }

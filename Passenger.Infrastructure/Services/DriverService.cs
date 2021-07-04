@@ -5,6 +5,8 @@ using Passenger.Core.Domain;
 using Passenger.Infrastructure.DTO;
 using AutoMapper;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
+using Passenger.Infrastructure.Settings;
 
 namespace Passenger.Infrastructure.Services
 {
@@ -13,7 +15,10 @@ namespace Passenger.Infrastructure.Services
         private readonly IDriverRepository _driverRepository;
         private readonly IMapper _mapper;
 
-        public DriverService(IDriverRepository driverRepository,IMapper mapper)
+
+        public DriverService(
+            IDriverRepository driverRepository,
+            IMapper mapper)
         {
             _driverRepository = driverRepository;
             _mapper = mapper;

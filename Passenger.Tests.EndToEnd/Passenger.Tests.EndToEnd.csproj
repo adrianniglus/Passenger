@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+      <Content Include="appsettings.json" CopyToOutputDirectory = "PreserveNewest"/>
+  </ItemGroup>
+
+  <ItemGroup>
       <ProjectReference Include="..\Passenger.Infrastructure\Passenger.Infrastructure.csproj" />
       <ProjectReference Include="..\Passenger.Api\Passenger.Api.csproj" />
   </ItemGroup>
@@ -21,6 +25,7 @@
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
     <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,9 @@
+using System.IO;
 using System.Net.Http;
 using System.Text;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Passenger.Api;
 
@@ -14,7 +16,13 @@ namespace Passenger.Tests.EndToEnd.Controllers
         public ControllerTestsBase()
         {
             Server = new TestServer(new WebHostBuilder()
-                        .UseStartup<Startup>());
+                .UseEnvironment("Development")
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseConfiguration(new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json")
+                    .Build())
+                .UseStartup<Startup>());
             Client = Server.CreateClient();
         }
 

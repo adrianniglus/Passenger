@@ -10,3 +10,15 @@ D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.csproj.CoreCompileIn
 D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.dll
 D:\Passenger\Passenger.Core\obj\Debug\net5.0\ref\Passenger.Core.dll
 D:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.pdb
+C:\Passenger\Passenger.Core\bin\Debug\net5.0\Passenger.Core.deps.json
+C:\Passenger\Passenger.Core\bin\Debug\net5.0\Passenger.Core.dll
+C:\Passenger\Passenger.Core\bin\Debug\net5.0\ref\Passenger.Core.dll
+C:\Passenger\Passenger.Core\bin\Debug\net5.0\Passenger.Core.pdb
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.csproj.AssemblyReference.cache
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.AssemblyInfoInputs.cache
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.AssemblyInfo.cs
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.csproj.CoreCompileInputs.cache
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.dll
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\ref\Passenger.Core.dll
+C:\Passenger\Passenger.Core\obj\Debug\net5.0\Passenger.Core.pdb

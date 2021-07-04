@@ -11,11 +11,13 @@ namespace Passenger.Infrastructure.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IEncrypter _encrypter;
         private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IMapper mapper)
+        public UserService(IUserRepository userRepository,IEncrypter encrypter, IMapper mapper)
         {
             _userRepository = userRepository;
+            _encrypter = encrypter;
             _mapper = mapper;
         }
 
@@ -26,7 +28,26 @@ namespace Passenger.Infrastructure.Services
             return _mapper.Map<User,UserDTO>(user);
         }
 
-        public async Task RegisterAsync(string email,string username, string password,string role)
+        public async Task LoginAsync(string email, string password)
+        {
+            var user = await _userRepository.GetAsync(email);
+
+            if(user == null)
+            {
+                throw new Exception("Wrong login data!");
+            }
+
+            var salt = user.Salt;
+            var hash = _encrypter.GetHash(password, salt);
+
+            if(user.Password == hash)
+            {
+                return;
+            }
+            throw new Exception("Wrong login data");
+        }
+
+        public async Task RegisterAsync(Guid userId, string email,string username, string password,string role)
         {
             var user = await _userRepository.GetAsync(email);
             if(user != null)
@@ -34,8 +55,9 @@ namespace Passenger.Infrastructure.Services
                 throw new Exception("Email already in use");
             }
 
-            var salt = Guid.NewGuid().ToString("N");
-            user = new User(email,username,password,role,salt);
+            var salt = _encrypter.GetSalt();
+            var hash = _encrypter.GetHash(password,salt);
+            user = new User(userId,email,username,hash,role,salt);
             await _userRepository.AddAsync(user);
             
         }
