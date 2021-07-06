@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Passenger\\Passenger.Api\\Passenger.Api.csproj": {}
+    "C:\\Passenger\\Passenger.Api\\Passenger.Api.csproj": {}
   },
   "projects": {
-    "D:\\Passenger\\Passenger.Api\\Passenger.Api.csproj": {
+    "C:\\Passenger\\Passenger.Api\\Passenger.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Passenger\\Passenger.Api\\Passenger.Api.csproj",
+        "projectUniqueName": "C:\\Passenger\\Passenger.Api\\Passenger.Api.csproj",
         "projectName": "Passenger.Api",
-        "projectPath": "D:\\Passenger\\Passenger.Api\\Passenger.Api.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "D:\\Passenger\\Passenger.Api\\obj\\",
+        "projectPath": "C:\\Passenger\\Passenger.Api\\Passenger.Api.csproj",
+        "packagesPath": "C:\\Users\\MobileManagement\\.nuget\\packages\\",
+        "outputPath": "C:\\Passenger\\Passenger.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MobileManagement\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj": {
-                "projectPath": "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj"
+              "C:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj": {
+                "projectPath": "C:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj"
               }
             }
           }
@@ -89,26 +91,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Passenger\\Passenger.Core\\Passenger.Core.csproj": {
+    "C:\\Passenger\\Passenger.Core\\Passenger.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Passenger\\Passenger.Core\\Passenger.Core.csproj",
+        "projectUniqueName": "C:\\Passenger\\Passenger.Core\\Passenger.Core.csproj",
         "projectName": "Passenger.Core",
-        "projectPath": "D:\\Passenger\\Passenger.Core\\Passenger.Core.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "D:\\Passenger\\Passenger.Core\\obj\\",
+        "projectPath": "C:\\Passenger\\Passenger.Core\\Passenger.Core.csproj",
+        "packagesPath": "C:\\Users\\MobileManagement\\.nuget\\packages\\",
+        "outputPath": "C:\\Passenger\\Passenger.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MobileManagement\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -141,34 +145,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj": {
+    "C:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj",
         "projectName": "Passenger.Infrastructure",
-        "projectPath": "D:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "D:\\Passenger\\Passenger.Infrastructure\\obj\\",
+        "projectPath": "C:\\Passenger\\Passenger.Infrastructure\\Passenger.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\MobileManagement\\.nuget\\packages\\",
+        "outputPath": "C:\\Passenger\\Passenger.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MobileManagement\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Passenger\\Passenger.Core\\Passenger.Core.csproj": {
-                "projectPath": "D:\\Passenger\\Passenger.Core\\Passenger.Core.csproj"
+              "C:\\Passenger\\Passenger.Core\\Passenger.Core.csproj": {
+                "projectPath": "C:\\Passenger\\Passenger.Core\\Passenger.Core.csproj"
               }
             }
           }
@@ -227,7 +233,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

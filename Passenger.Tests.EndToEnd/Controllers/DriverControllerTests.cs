@@ -19,8 +19,7 @@ namespace Passenger.Tests.EndToEnd.Controllers
             {
                 UserId = Guid.NewGuid(),
                 VehicleBrand = "Toyota",
-                VehicleName = "Supra",
-                VehicleSeats = 5
+                VehicleName = "Supra"
             };
 
             var payload = GetPayload(command);

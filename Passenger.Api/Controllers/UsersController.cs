@@ -26,9 +26,18 @@ namespace Passenger.Api.Controllers
             _userService = userService;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var users = await _userService.BrowseAsync();
+
+            return Ok(users);
+        }
+
+
         [HttpGet("{email}")]
-       public async Task<IActionResult> Get(string email)
-       {
+        public async Task<IActionResult> Get(string email)
+        {
             var user = await _userService.GetAsync(email);
 
             if(user == null)
@@ -37,14 +46,14 @@ namespace Passenger.Api.Controllers
             }
 
             return Ok(user);
-       }
+        }
             
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]CreateUser command)
         {        
-            await CommandDispatcher.DispatchAsync(command);
+            await DispatchAsync(command);
 
-            return Created($"users/{command.Email}", new object());
+            return Created($"users/{command.Email}", null);
         }
 
             

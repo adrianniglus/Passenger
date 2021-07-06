@@ -20,7 +20,7 @@ namespace Passenger.Tests.EndToEnd.Controllers
         [Fact]
         public async Task given_valid_email_user_should_exist()
         {
-            var email = "user1@gmail.com";
+            var email = "user123@test.com";
             var response = await Client.GetAsync($"users/{email}");
             response.EnsureSuccessStatusCode();
 

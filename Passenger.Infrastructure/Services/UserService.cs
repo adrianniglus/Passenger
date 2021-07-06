@@ -5,6 +5,7 @@ using Passenger.Core.Domain;
 using Passenger.Infrastructure.DTO;
 using AutoMapper;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Passenger.Infrastructure.Services
 {
@@ -60,6 +61,13 @@ namespace Passenger.Infrastructure.Services
             user = new User(userId,email,username,hash,role,salt);
             await _userRepository.AddAsync(user);
             
+        }
+
+        public async Task<IEnumerable<UserDTO>> BrowseAsync()
+        {
+            var users = await _userRepository.GetAllAsync();
+
+            return _mapper.Map<IEnumerable<User>, IEnumerable<UserDTO>>(users);
         }
     }
 }

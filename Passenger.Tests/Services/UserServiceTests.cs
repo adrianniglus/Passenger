@@ -22,7 +22,7 @@ namespace Passenger.Tests.Services
 
 
             var userService = new UserService(userRepositoryMock.Object,encrypterMock.Object,mapperMock.Object);
-            await userService.RegisterAsync(Guid.NewGuid(),"user1@test.com","user123456","Secret123456","user");
+            await userService.RegisterAsync(Guid.NewGuid(),"user20@test.com","user123456","Secret123456","user");
 
             userRepositoryMock.Verify(x => x.AddAsync(It.IsAny<User>()),Times.Once);
         }

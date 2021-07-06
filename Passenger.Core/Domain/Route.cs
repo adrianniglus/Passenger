@@ -4,7 +4,8 @@ namespace Passenger.Core.Domain
 {
     public class Route
     {
-        public Guid Id {get; protected set;}
+        
+        public string Name { get; protected set; }
         public Node StartNode {get; protected set;}
         public Node EndNode {get; protected set;}
     
@@ -12,11 +13,24 @@ namespace Passenger.Core.Domain
         {
         }
 
-        public Route(Node startNode, Node endNode)
+        public Route(string name,Node startNode, Node endNode)
         {
-            Id = Guid.NewGuid();
+            SetName(name);
             SetStartNode(startNode);
             SetEndNode(endNode);
+        }
+
+        public void SetName(string name)
+        {
+            if(string.IsNullOrWhiteSpace(name))
+            {
+                throw new Exception("Route name is invalid");
+            }
+            if(Name == name)
+            {
+                return;
+            }
+            Name = name;
         }
 
         public void SetStartNode(Node startNode)
@@ -48,6 +62,9 @@ namespace Passenger.Core.Domain
 
             EndNode = endNode;
         }
+
+        public static Route Create(string name,Node startNode, Node endNode)
+            => new Route(name,startNode, endNode);
     }
 
     

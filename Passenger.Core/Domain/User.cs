@@ -72,15 +72,13 @@ namespace Passenger.Core.Domain
                 return;
             }
 
-            if(password.Length > 30)
-            {
-                throw new Exception("Password is too long");
-            }
+            //if(password.Length >= 30)
+            //{
+            //    throw new Exception("Password is too long");
+            //}
 
             Password = password;
             UpdatedAt = DateTime.UtcNow;
-
-
         }
 
         public void SetUsername(string username)

@@ -9,6 +9,7 @@
       "Passenger.Tests.EndToEnd/1.0.0": {
         "dependencies": {
           "Autofac": "6.1.0",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
           "FluentAssertions": "5.10.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.7",
           "Microsoft.AspNetCore.TestHost": "5.0.5",

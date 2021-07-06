@@ -23,6 +23,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Passenger.Infrastructure.Settings;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Passenger.Api
 {
@@ -53,6 +54,8 @@ namespace Passenger.Api
             );
             services.AddMemoryCache();
             services.AddOptions();
+            services.AddMvc()
+                .AddJsonOptions(x => x.JsonSerializerOptions.WriteIndented = true);
 
             var jwtSettings = Configuration.GetSection("jwt").Get<JwtSettings>();
             services.AddOptions<JwtSettings>().Bind(Configuration.GetSection("JwtSettings"));
@@ -93,6 +96,10 @@ namespace Passenger.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Passenger.Api v1"));
             }
+
+
+
+            
 
             var generalSettings = app.ApplicationServices.GetService<GeneralSettings>();
 

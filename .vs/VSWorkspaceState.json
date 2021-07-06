@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Passenger.Api",
+    "\\Passenger.Core",
+    "\\Passenger.Infrastructure",
+    "\\Passenger.Tests",
+    "\\Passenger.Tests\\Services"
+  ],
+  "SelectedNode": "\\Passenger.Api\\bin",
+  "PreviewInSolutionExplorer": false
+}

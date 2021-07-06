@@ -23,7 +23,7 @@ namespace Passenger.Core.Domain
 
         public void SetAddress(string address)
         {
-            if(string.IsNullOrEmpty(address))
+            if(string.IsNullOrWhiteSpace(address))
             {
                 throw new Exception("Please enter valid address!");
             }

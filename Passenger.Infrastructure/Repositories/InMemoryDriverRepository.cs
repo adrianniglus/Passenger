@@ -10,11 +10,7 @@ namespace Passenger.Infrastructure.Repositories
 {
     public class InMemoryDriverRepository : IDriverRepository
     {
-        private static ISet<Driver> _drivers = new HashSet<Driver>
-        {
-            new Driver(new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"),"Ford","Focus",5),
-            new Driver(new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"),"Volkswagen","Polo",4)
-        };
+        private static ISet<Driver> _drivers = new HashSet<Driver>();
 
         public async Task AddAsync(Driver driver)
         {
