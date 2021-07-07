@@ -24,6 +24,11 @@ using Microsoft.IdentityModel.Tokens;
 using Passenger.Infrastructure.Settings;
 using System.Text;
 using Newtonsoft.Json;
+using Passenger.Api.Framework;
+using NLog.Extensions.Logging;
+using NLog.Web;
+using NLog.Web.AspNetCore;
+using NLog;
 
 namespace Passenger.Api
 {
@@ -75,6 +80,10 @@ namespace Passenger.Api
             // builder.RegisterModule(new SettingsModule(Configuration));
             // ApplicationContainer = builder.Build();
             // //return new AutofacServiceProvider(ApplicationContainer);
+
+
+
+            
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -99,7 +108,27 @@ namespace Passenger.Api
 
 
 
-            
+
+            //NLog configuration
+
+            var config = new NLog.Config.LoggingConfiguration();
+
+            // Targets where to log to: File and Console
+            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = "file.txt" };
+            var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+
+            // Rules for mapping loggers to targets            
+            config.AddRule(NLog.LogLevel.Info, NLog.LogLevel.Fatal, logconsole);
+            config.AddRule(NLog.LogLevel.Debug, NLog.LogLevel.Fatal, logfile);
+
+            // Apply config           
+            NLog.LogManager.Configuration = config;
+
+
+
+
+
+
 
             var generalSettings = app.ApplicationServices.GetService<GeneralSettings>();
 
@@ -109,7 +138,7 @@ namespace Passenger.Api
                 dataInitializer.SeedAsync();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -117,10 +146,15 @@ namespace Passenger.Api
 
             app.UseAuthorization();
 
+            app.UseMyExceptionHandler(); //Exception handling
+            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            
 
             appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
 

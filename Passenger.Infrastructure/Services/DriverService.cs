@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using Passenger.Infrastructure.Settings;
 using System.Collections.Generic;
+using Passenger.Infrastructure.Extensions;
+using Passenger.Infrastructure.Exceptions;
 
 namespace Passenger.Infrastructure.Services
 {
@@ -40,15 +42,12 @@ namespace Passenger.Infrastructure.Services
 
         public async Task CreateAsync(Guid userId)
         {
-            var user = await _userRepository.GetAsync(userId);
-            if(user == null)
-            {
-                throw new Exception("User does not exist");
-            }
+            var user = await _userRepository.GetOrFailAsync(userId);
+            
             var driver = await _driverRepository.GetAsync(userId);
             if (driver != null)
             {
-                throw new Exception("Driver already exist");
+                throw new ServiceException(Exceptions.ErrorCodes.DriverAlreadyExists,"Driver already exist");
             }
 
             driver = new Driver(user);
@@ -57,13 +56,19 @@ namespace Passenger.Infrastructure.Services
 
         }
 
+        public async Task DeleteAsync(Guid userId)
+        {
+            var driver = await _driverRepository.GetOrFailAsync(userId);
+
+            await _driverRepository.DeleteAsync(driver);
+
+
+        }
+
         public async Task SetVehicleAsync(Guid userId, string brand, string name)
         {
-            var driver = await _driverRepository.GetAsync(userId);
-            if (driver == null)
-            {
-                throw new Exception("Driver wasn't found");
-            }
+            var driver = await _driverRepository.GetOrFailAsync(userId);
+
             var vehicleDetails = await _vehicleProvider.GetAsync(brand, name);
             var vehicle = Vehicle.Create(brand, name, vehicleDetails.Seats);
             driver.SetVehicle(vehicle);

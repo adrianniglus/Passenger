@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Passenger.Core.Domain;
 using Passenger.Core.Repositories;
+using Passenger.Infrastructure.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,24 +14,29 @@ namespace Passenger.Infrastructure.Services
     {
 
         private readonly IDriverRepository _driverRepository;
-        private readonly IUserRepository _userRepository;
+
+        private readonly IRouteManager _routeManager;
         private readonly IMapper _mapper;
 
-        public DriverRouteService(IDriverRepository driverRepository, IUserRepository userRepository, IMapper mapper)
+        public DriverRouteService(IDriverRepository driverRepository, IRouteManager routeManager, IMapper mapper)
         {
             _driverRepository = driverRepository;
-            _userRepository = userRepository;
+            _routeManager = routeManager;
             _mapper = mapper;
         }
         public async Task AddAsync(Guid userId, string name, double startLatitude, double startLongitude, double endLatitude, double endLongitude)
         {
-            var driver = GetDriver(userId);
+            var driver = await _driverRepository.GetOrFailAsync(userId);
 
-            var startNode = Node.Create("Start address", startLongitude, startLatitude);
-            var endNode = Node.Create("End address", endLongitude, endLatitude);
-            var route = Route.Create(name, startNode, endNode);
+            var startAddress = await _routeManager.GetAddressAsync(startLatitude, startLongitude);
+            var endAddress = await _routeManager.GetAddressAsync(endLatitude,endLongitude);
 
-            driver.AddRoute(name, startNode, endNode);
+            var startNode = Node.Create(startAddress, startLongitude, startLatitude);
+            var endNode = Node.Create(endAddress, endLongitude, endLatitude);
+
+            var distance = _routeManager.CalculateDistance(startNode,endNode);
+
+            driver.AddRoute(name, startNode, endNode, distance);
             await _driverRepository.UpdateAsync(driver);
 
 
@@ -38,7 +44,7 @@ namespace Passenger.Infrastructure.Services
 
         public async Task DeleteAsync(Guid userId, string name)
         {
-            var driver = GetDriver(userId);
+            var driver = await _driverRepository.GetOrFailAsync(userId);
 
             driver.DeleteRoute(name);
 
@@ -46,14 +52,6 @@ namespace Passenger.Infrastructure.Services
             
         }
 
-        public Driver GetDriver(Guid userId)
-        {
-            var driver = _driverRepository.GetAsync(userId);
-            if (driver == null)
-            {
-                throw new Exception($"Driver with user id: {userId} does not exist!");
-            }
-            return driver.Result;
-        }
+        
     }
 }

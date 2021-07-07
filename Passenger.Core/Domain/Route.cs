@@ -8,16 +8,23 @@ namespace Passenger.Core.Domain
         public string Name { get; protected set; }
         public Node StartNode {get; protected set;}
         public Node EndNode {get; protected set;}
+        public double Distance { get; set; }
     
         public Route()
         {
         }
 
-        public Route(string name,Node startNode, Node endNode)
+        private Route(string name,Node startNode, Node endNode, double distance)
         {
             SetName(name);
             SetStartNode(startNode);
             SetEndNode(endNode);
+            if(distance < 0)
+            {
+                throw new Exception("Distance can not be less the zero!");
+                
+            }
+            Distance = distance;
         }
 
         public void SetName(string name)
@@ -63,8 +70,8 @@ namespace Passenger.Core.Domain
             EndNode = endNode;
         }
 
-        public static Route Create(string name,Node startNode, Node endNode)
-            => new Route(name,startNode, endNode);
+        public static Route Create(string name,Node startNode, Node endNode, double distance)
+            => new Route(name,startNode, endNode, distance);
     }
 
     

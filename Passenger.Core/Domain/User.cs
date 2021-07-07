@@ -40,12 +40,12 @@ namespace Passenger.Core.Domain
 
             if(string.IsNullOrEmpty(email))
             {
-                throw new Exception("Email is empty!");
+                throw new DomainException(ErrorCodes.InvalidEmail,"Email is empty!");
             }
 
             if(!ValidateEmail(email))
             {
-                throw new Exception("Email is invalid");
+                throw new DomainException(ErrorCodes.InvalidEmail,"Email is invalid");
             }
 
             if(Email == email)
@@ -64,7 +64,7 @@ namespace Passenger.Core.Domain
 
             if(!ValidatePassword(password))
             {
-                throw new Exception("Password is invalid!");
+                throw new DomainException(ErrorCodes.InvalidPassword,"Password is invalid!");
             }
 
             if(Password == password)
@@ -72,9 +72,9 @@ namespace Passenger.Core.Domain
                 return;
             }
 
-            //if(password.Length >= 30)
+            //if(password.Length >= 100)
             //{
-            //    throw new Exception("Password is too long");
+            //    throw new DomainException(ErrorCodes.InvalidPassword,"Password is too long");
             //}
 
             Password = password;
@@ -86,11 +86,11 @@ namespace Passenger.Core.Domain
 
             if(string.IsNullOrEmpty(username))
             {
-                throw new Exception("Username can't be empty!");
+                throw new DomainException(ErrorCodes.InvalidUsername,"Username can't be empty!");
             }
             if(!ValidateUsername(username))
             {
-                throw new Exception("This is not a valid username! First character need to be a letter, can contain only letters and numbers, 6 to 12 characters!");
+                throw new DomainException(ErrorCodes.InvalidUsername, "This is not a valid username! First character need to be a letter, can contain only letters and numbers, 6 to 12 characters!");
             }
 
             if(Username == username)
@@ -107,7 +107,7 @@ namespace Passenger.Core.Domain
         {
             if(string.IsNullOrEmpty(role))
             {
-                throw new Exception("Role can't be empty!");
+                throw new DomainException(ErrorCodes.InvalidRole,"Role can't be empty!");
             }
             if(Role == role)
             {

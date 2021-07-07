@@ -1,11 +1,12 @@
 using System;
 using Passenger.Infrastructure.Repositories;
 using Passenger.Core.Repositories;
-using Passenger.Core.Domain;
 using Passenger.Infrastructure.DTO;
 using AutoMapper;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Passenger.Infrastructure.Exceptions;
+using Passenger.Core.Domain;
 
 namespace Passenger.Infrastructure.Services
 {
@@ -35,7 +36,7 @@ namespace Passenger.Infrastructure.Services
 
             if(user == null)
             {
-                throw new Exception("Wrong login data!");
+                throw new ServiceException(Exceptions.ErrorCodes.InvalidCredentials,"Invalid credentials");
             }
 
             var salt = user.Salt;
@@ -45,7 +46,7 @@ namespace Passenger.Infrastructure.Services
             {
                 return;
             }
-            throw new Exception("Wrong login data");
+            throw new ServiceException(Exceptions.ErrorCodes.InvalidCredentials,"Invalid credentials");
         }
 
         public async Task RegisterAsync(Guid userId, string email,string username, string password,string role)
@@ -53,7 +54,7 @@ namespace Passenger.Infrastructure.Services
             var user = await _userRepository.GetAsync(email);
             if(user != null)
             {
-                throw new Exception("Email already in use");
+                throw new ServiceException(Exceptions.ErrorCodes.EmailInUse,"Email already in use");
             }
 
             var salt = _encrypter.GetSalt();

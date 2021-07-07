@@ -86,3 +86,7 @@ C:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.dll
 C:\Passenger\Passenger.Api\obj\Debug\net5.0\ref\Passenger.Api.dll
 C:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.pdb
 C:\Passenger\Passenger.Api\obj\Debug\net5.0\Passenger.Api.genruntimeconfig.cache
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\NLog.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\nlog.config
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\NLog.Web.AspNetCore.dll

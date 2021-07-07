@@ -24,6 +24,11 @@ namespace Passenger.Infrastructure.Repositories
         public async Task<IEnumerable<Driver>> GetAllAsync()
             => await Task.FromResult(_drivers);
 
+        public async Task DeleteAsync(Driver driver)
+        {
+            _drivers.Remove(driver);
+            await Task.CompletedTask;
+        }
         public async Task UpdateAsync(Driver driver)
         {
             //do something

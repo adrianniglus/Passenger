@@ -12,6 +12,7 @@ namespace Passenger.Core.Domain
         public Guid UserId {get; protected set;}
         public string Name { get; protected set; }
         public Vehicle Vehicle {get; protected set;}
+        
         public IEnumerable<Route> Routes
         {
             get { return _routes; }
@@ -30,7 +31,7 @@ namespace Passenger.Core.Domain
             Name = user.Username;
         }
 
-        public void AddRoute(string name, Node start, Node end)
+        public void AddRoute(string name, Node start, Node end, double distance)
         {
             var route = GetRoute(name);
 
@@ -39,7 +40,7 @@ namespace Passenger.Core.Domain
                 throw new Exception($"Route with name '{name}' for driver: '{Name}' already exists!");
             }
 
-            _routes.Add(Route.Create(name, start, end));
+            _routes.Add(Route.Create(name, start, end, distance));
             UpdatedAt = DateTime.UtcNow;
         }
 

@@ -11,6 +11,7 @@ namespace Passenger.Infrastructure.DTO
         public string Name { get; set; }
         public NodeDTO StartNode { get; set; }
         public NodeDTO EndNode { get; set; }
+        public double Distance { get; set; }
 
     }
 }
