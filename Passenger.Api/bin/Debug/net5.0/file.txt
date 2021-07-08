@@ -1,1 +1,8 @@
 2021-07-07 15:19:10.8255|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 08:28:32.9138|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 11:46:27.6281|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 11:53:50.5682|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 12:00:17.5917|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 14:40:27.0620|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 14:40:39.3784|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers
+2021-07-08 14:40:50.3520|INFO|Passenger.Api.Controllers.DriverController|Fetching drivers

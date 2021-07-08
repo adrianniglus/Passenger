@@ -4,6 +4,7 @@ using Passenger.Infrastructure.Commands;
 using Passenger.Infrastructure.Settings;
 using Passenger.Infrastructure.Extensions;
 using Microsoft.Extensions.Configuration;
+using Passenger.Infrastructure.Mongo;
 
 namespace Passenger.Infrastructure.IoC.Modules
 {
@@ -24,6 +25,9 @@ namespace Passenger.Infrastructure.IoC.Modules
                    .SingleInstance();
 
             builder.RegisterInstance(_configuration.GetSettings<JwtSettings>())
+                    .SingleInstance();
+
+            builder.RegisterInstance(_configuration.GetSettings<MongoSettings>())
                     .SingleInstance();
         }
     }

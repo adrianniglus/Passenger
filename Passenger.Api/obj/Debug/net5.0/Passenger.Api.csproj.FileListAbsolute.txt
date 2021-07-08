@@ -90,3 +90,15 @@ C:\Passenger\Passenger.Api\bin\Debug\net5.0\NLog.dll
 C:\Passenger\Passenger.Api\bin\Debug\net5.0\nlog.config
 C:\Passenger\Passenger.Api\bin\Debug\net5.0\NLog.Extensions.Logging.dll
 C:\Passenger\Passenger.Api\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\DnsClient.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\MongoDB.Bson.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\MongoDB.Driver.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\SharpCompress.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Passenger\Passenger.Api\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll

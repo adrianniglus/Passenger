@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.4, )"
+            },
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[1.7.3, )"
@@ -220,6 +224,10 @@
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.4, )"
             },
             "NLog": {
               "target": "Package",

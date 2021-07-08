@@ -29,6 +29,7 @@ using NLog.Extensions.Logging;
 using NLog.Web;
 using NLog.Web.AspNetCore;
 using NLog;
+using Passenger.Infrastructure.Mongo;
 
 namespace Passenger.Api
 {
@@ -125,7 +126,8 @@ namespace Passenger.Api
             NLog.LogManager.Configuration = config;
 
 
-
+            //MongoDB configuration
+            MongoConfigurator.Initialize();
 
 
 
